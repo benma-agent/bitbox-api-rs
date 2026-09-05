@@ -46,7 +46,6 @@ wasm-bindgen-futures = { version = "=0.4.42", optional = true }
 web-sys = { version = "=0.3.69", features = ["Storage", "Window"], optional = true }
 
 [dev-dependencies]
-async-trait = "0.1.68"
 futures-channel = "0.3"
 wasm-bindgen-test = "=0.3.42"
 tokio = { version = "1", features = ["time", "macros", "rt", "fs"] }
