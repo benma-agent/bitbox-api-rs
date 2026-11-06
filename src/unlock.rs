@@ -196,7 +196,6 @@ impl<R: Runtime> LockedBitBox<R> {
 
 impl<R: Runtime> Session<R> {
     async fn unlock(&self, config: &PassphraseConfig) -> Result<(), Error> {
-        let _api_call = self.begin_api_call().await;
         let result = self.unlock_inner(config).await;
         if result.is_err() {
             // Release an abandoned workflow after a known failure. A dropped future cannot do
