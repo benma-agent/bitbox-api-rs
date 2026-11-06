@@ -127,12 +127,6 @@ impl U2fHid {
             message = &message[len..];
 
             seq += 1;
-            if seq > 127 && !message.is_empty() {
-                return Err(std::io::Error::new(
-                    std::io::ErrorKind::InvalidInput,
-                    "More frames than allowed",
-                ));
-            }
         }
 
         Ok(enc_len)
